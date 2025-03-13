@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Interactive Music Experience";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Interactive Music Experience</h1>
+    
+    <div class="video-container">
+        <iframe id="musicVideo" width="560" height="315" 
+                src="https://www.youtube.com/embed/d-diB65scQU?si=0yJk6Yf2NNwbO4d_" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </div>
+    
+    <p class="display-6">Welcome to my music website! Enjoy some of my favorite songs.</p>
+    
+    <div id="animatedText" class="animated-text">
+        Click the button to start the animation!
+    </div>
+    
+    <div class="button-group">
+        <button id="animateButton" class="btn btn-primary">Animate Text</button>
+        <button id="changeVideoButton" class="btn btn-secondary">Change Song</button>
+    </div>
+    
+    <div class="music-controls mt-4">
+        <div class="mood-selector">
+            <label>Select your mood:</label>
+            <select id="moodSelector" class="form-select">
+                <option value="happy">Happy</option>
+                <option value="relaxed">Relaxed</option>
+                <option value="energetic">Energetic</option>
+                <option value="focused">Focused</option>
+            </select>
+        </div>
+    </div>
+    
+    <div id="songInfo" class="song-info mt-3 fade-out">
+        <h4 id="songTitle">Don't Worry, Be Happy - Bobby McFerrin</h4>
+        <p id="songDescription">
+            A classic feel-good song that reminds us to stay positive.
+        </p>
+    </div>
+</div>
